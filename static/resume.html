@@ -241,52 +241,65 @@
 
          
         @media print {
+            * {
+                box-sizing: border-box !important;
+            }
+            
             body {
                 font-size: 10pt;
+                margin: 0 !important;
+                padding: 0 !important;
+                line-height: 1.4 !important;
             }
             
             .container {
-                padding: 0.4in;
-                margin: 0;
-                max-width: none;
+                padding: 0.4in !important;
+                margin: 0 !important;
+                max-width: none !important;
             }
             
             .header {
-                page-break-after: avoid;
-                page-break-inside: avoid;
-                margin-bottom: 0 !important;
-                padding-bottom: 0 !important;
-            }
-            
-            .section:first-of-type {
-                page-break-before: avoid;
-                margin-top: 0 !important;
-                padding-top: 0 !important;
-            }
-            
-            .section-title {
-                margin-bottom: 0 !important;
-                padding-bottom: 0 !important;
-                margin-top: 0 !important;
-                padding-top: 0 !important;
-            }
-            
-            .experience-item:first-child {
-                margin-top: 0 !important;
-                padding-top: 0 !important;
+                page-break-after: avoid !important;
+                page-break-inside: avoid !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                padding-bottom: 1px !important;
+                border-bottom: 2px solid #333 !important;
             }
             
             .section {
-                page-break-inside: avoid;
+                page-break-inside: avoid !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            
+            .section:first-of-type {
+                page-break-before: avoid !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                transform: translateY(-2px) !important;
+            }
+            
+            .section-title {
+                margin: 0 !important;
+                padding: 0 !important;
+                margin-bottom: 2px !important;
+                padding-bottom: 1px !important;
             }
             
             .experience-item {
-                page-break-inside: avoid;
+                page-break-inside: avoid !important;
+            }
+            
+            .experience-item:first-child {
+                margin: 0 !important;
+                padding: 0 !important;
+                transform: translateY(-1px) !important;
             }
             
             .profile-url-link {
-                color: #333;
-                text-decoration: none;
+                color: #333 !important;
+                text-decoration: none !important;
             }
         }
 
