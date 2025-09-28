@@ -25,9 +25,9 @@
          
         .header {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             border-bottom: 2px solid #333;
-            padding-bottom: 15px;
+            padding-bottom: 12px;
         }
 
         .name {
@@ -227,12 +227,27 @@
                 max-width: none;
             }
             
+            .header {
+                margin-bottom: 15px;
+                page-break-after: avoid;
+            }
+            
             .section {
                 page-break-inside: avoid;
+                margin-bottom: 12px;
+            }
+            
+            .section:first-of-type {
+                page-break-before: avoid;
+                margin-top: 0;
             }
             
             .experience-item {
                 page-break-inside: avoid;
+            }
+            
+            .section-title {
+                page-break-after: avoid;
             }
         }
 
