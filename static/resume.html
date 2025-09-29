@@ -1,481 +1,536 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyle Keilson - Resume</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            line-height: 1.4;
-            margin: 0;
-            padding: 0;
-            background: white;
-            color: #333;
-            font-size: 11pt;
-        }
 
-        .container {
-            max-width: 8.5in;
-            margin: 0 auto;
-            padding: 0.75in;
-            background: white;
-        }
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
 
-         
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #333;
-            padding-bottom: 15px;
-        }
+  <title>Kyle Keilson</title>
 
-        .name {
-            font-size: 24pt;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
+  <style>
+    body {
+      background: #EEEEEE;
+      font: 12px "Times New Roman", Times, sans-serif;
+      line-height: 1.4;
+      margin: 40px 0;
+    }
 
-        .contact-info {
-            font-size: 10pt;
-            margin-bottom: 5px;
-        }
+    em {
+      color: #999;
+    }
 
-        .profiles {
-            font-size: 10pt;
-        }
+    p {
+      line-height: 1.4;
+    }
 
-        .profiles a {
-            color: #333;
-            text-decoration: none;
-        }
+    ul {
+      margin-bottom: 0;
+    }
 
-        .profiles a:hover {
-            text-decoration: underline;
-        }
+    li {
+      margin-bottom: 2px;
+    }
 
-         
-        .section {
-            margin-bottom: 20px;
-        }
-        
-        .section:first-of-type {
-            margin-top: 0;
-        }
+    a {
+      text-decoration: none;
+    }
 
-        .section-title {
-            font-size: 12pt;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #666;
-            padding-bottom: 3px;
-        }
+    #resume {
+      margin: 0 auto;
+      max-width: 600px;
+      padding: 80px 100px;
+      background: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 4px #aaa;
+      -webkit-box-shadow: 2px 2px 4px #aaa;
+    }
 
-         
-        .summary-text {
-            font-size: 11pt;
-            line-height: 1.5;
-            text-align: justify;
-            margin-bottom: 5px;
-        }
+    .coursesList {
+      width: 28%;
+      vertical-align: top;
+      display: inline-block;
+    }
 
-         
-        .experience-item {
-            margin-bottom: 15px;
-            page-break-inside: avoid;
-        }
+    .largeFont {
+      font-size: 20px;
+    }
 
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 5px;
-        }
+    .smallFont {
+      font-size: 12px;
+    }
 
-        .job-title {
-            font-weight: bold;
-            font-size: 11pt;
-        }
+    .sectionBlock {
+      display: flex;
+      width: 100%;
+    }
 
-        .job-dates {
-            font-size: 10pt;
-            color: #666;
-        }
+    .sectionName {
+      width: 18%;
+      vertical-align: top;
+      display: inline-block;
+    }
 
-        .company {
-            font-style: italic;
-            margin-bottom: 5px;
-            font-size: 10pt;
-        }
+    .sectionContent {
+      width: 80%;
+      vertical-align: top;
+      display: inline-block;
+    }
 
-        .highlights {
-            margin: 0;
-            padding-left: 20px;
-        }
+    .sectionContent ul {
+      padding-left: 20px;
+      margin-top: 6px;
+      list-style-type: circle;
+    }
 
-        .highlights li {
-            margin-bottom: 3px;
-            font-size: 10pt;
-            text-align: justify;
-        }
+    .sectionContent .title {
+      font-weight: bold;
+    }
 
-         
-        .education-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 8px;
-        }
+    .sectionContent .date {
+      float: right;
+    }
 
-        .degree-info {
-            font-weight: bold;
-        }
+    .blockHeader .title {
+      font-weight: bold;
+      font-size: 14px;
+    }
 
-        .institution {
-            font-style: italic;
-            margin-top: 2px;
-        }
+    .highlights li {
+      margin-bottom: 3px;
+    }
 
-        .graduation-date {
-            color: #666;
-            font-size: 10pt;
-        }
+    .sectionContent .separator {
+      height: 14px;
+    }
 
-         
-        .skill-category {
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
+    .sectionLine {
+      border-style: dashed;
+      border-width: 1px;
+      border-color: #CFCFCF;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
 
-        .skill-name {
-            font-weight: bold;
-            display: inline-block;
-            min-width: 140px;
-            vertical-align: top;
-        }
+    .divider {
+      font-weight: bold;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
 
-        .skill-list {
-            display: inline-block;
-            margin-left: 10px;
-            vertical-align: top;
-            width: calc(100% - 160px);
-        }
+    .summary {
+      margin-top: 6px;
+    }
 
-         
-        .certification-item {
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
+    .skillBlock {
+      margin-bottom: 4px;
+    }
 
-        .certification-info {
-            flex: 1;
-        }
+    .jobBlock {
+      page-break-inside: avoid;
+    }
 
-        .certification-name {
-            font-weight: bold;
-            margin-bottom: 2px;
-        }
+    .certificationBlock {
+      margin-bottom: 8px;
+    }
 
-        .certification-issuer {
-            font-style: italic;
-            font-size: 10pt;
-            color: #666;
-        }
+    .certificationBlock .issuer {
+      font-style: italic;
+      color: #666;
+    }
 
-        .certification-date {
-            font-size: 10pt;
-            color: #666;
-            white-space: nowrap;
-        }
+     
+    @media only screen and (max-width: 40em) {
+      body {
+        margin: 0;
+        font-size: 14px;
+      }
 
-         
-        .speaking-item {
-            margin-bottom: 10px;
-        }
+      #resume {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 0.5em 1em;
+        border: none;
+      }
 
-        .speaking-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 2px;
-        }
+      .sectionContent {
+        width: 100%;
+      }
 
-        .speaking-title {
-            font-weight: bold;
-        }
+      .sectionContent .date {
+        padding-right: 2em;
+      }
 
-        .speaking-date {
-            font-size: 10pt;
-            color: #666;
-        }
+      .sectionName {
+        width: auto;
+      }
 
-        .speaking-event {
-            font-style: italic;
-            font-size: 10pt;
-            color: #666;
-        }
+      .largeFont {
+        font-size: 20px;
+      }
 
-         
-        @media print {
-            body {
-                font-size: 10pt;
-            }
-            
-            .container {
-                padding: 0.5in;
-                margin: 0;
-                max-width: none;
-            }
-            
-            .header {
-                margin-bottom: 15px;
-            }
-            
-            .section {
-                page-break-inside: avoid;
-                margin-bottom: 15px;
-            }
-            
-            .experience-item {
-                page-break-inside: avoid;
-            }
-        }
+      .smallFont {
+        font-size: 14px;
+      }
+    }
 
-         
-        @media screen and (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            .job-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .education-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
+    @media print {
+      #resume {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 0px 0px;
+        border: 0px;
+        background: #fff;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+      }
+
+      a {
+        color: black;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
-    <div class="container">
+
+  <div id='resume'>
+    <div id='nameBlock' class='largeFont'>
+      <span class='name'>
+        Kyle Keilson
+      </span>
+    </div>
+    <div id='basicsBlock' class='smallFont'>
+      <div class='contactBlock'>
+        <span class='email'>kylekeilson@gmail.com</span>
+        <span class='divider'>|</span>
+        <span class='address'>
+          Oswego, Illinois, US
+        </span>
+      </div>
+      <div id='profilesBlock'>
         
-        <div class="header">
-            <div class="name">Kyle Keilson</div>
-            <div class="contact-info">
-                kylekeilson@gmail.com • Oswego, Illinois US
-            </div>
-            <div class="profiles">
-                <a href="https://www.keilson.org">https://www.keilson.org</a> • 
-                <a href="https://github.com/kkeilson">https://github.com/kkeilson</a> • 
-                <a href="https://www.linkedin.com/in/kkeilson/">https://www.linkedin.com/in/kkeilson/</a>
-            </div>
+        
+        <span class='url'>
+          <a href='https://www.keilson.org'>https://www.keilson.org</a>
+        </span>
+        
+        <span class='divider'>|</span>
+        <span class='url'>
+          <a href='https://github.com/kkeilson'>https://github.com/kkeilson</a>
+        </span>
+        
+        <span class='divider'>|</span>
+        <span class='url'>
+          <a href='https://www.linkedin.com/in/kkeilson/'>https://www.linkedin.com/in/kkeilson/</a>
+        </span>
+        
+      </div>
+    </div>
+    <div class='sectionLine'></div>
+
+
+    <div id='workBlock' class="sectionBlock">
+      <div class='sectionName'>
+        <span>EXPERIENCE</span>
+      </div>
+      <div class='sectionContent'>
+        
+        
+        <div class="jobBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              Ringling College of Art and Design, Senior Systems Engineer
+            </span>
+            <span class='date'>
+              January 2019 &mdash;  current
+            </span>
+          </div>
+          <ul class='highlights'>
+            
+            <li> Architected, deployed, and managed a robust enterprise virtualization environment based on VMware vCenter/ESXi and Hyper-converged Infrastructure (Cisco HyperFlex).</li>
+            
+            <li> Led the deployment of Pure Storage SAN arrays and administered hardware across Cisco UCS blade and Dell PowerEdge fleets.</li>
+            
+            <li> Designed and maintain CI/CD pipelines using Git, Ansible, and GitHub Actions for automated deployment of macOS configurations, VMware templates, and infrastructure provisioning across enterprise environments.</li>
+            
+            <li> Spearheaded Identity and Access Management (IAM) solutions using Okta Workforce Identity Cloud, developing Okta Workflows and contributing to complex SSO integrations.</li>
+            
+            <li> Implemented automated account provisioning integrating Okta with Workday HCM, enabling seamless onboarding workflows for both students and employees while maintaining security compliance and reducing manual provisioning overhead.</li>
+            
+            <li> Enhanced organizational security posture by managing and troubleshooting Palo Alto firewall rules, administering the Graylog log management solution, and providing system hardening expertise.</li>
+            
+            <li> Architected serverless AWS Lambda functions integrated with Signalwire telephony to handle Okta MFA voice authentication, with automated deployments managed through GitHub Actions workflows for continuous integration and delivery.</li>
+            
+            <li> Orchestrate automated deployment pipelines for 3,000&#43; macOS devices using Jamf Pro and Munki with Git-based workflows, enabling continuous integration of software packages and configuration management through Bash/Python automation scripts.</li>
+            
+            <li> Maintain enterprise-grade CI/CD workflows with automated testing, staged deployments, and rollback capabilities, reducing deployment errors by 85% and enabling rapid iteration cycles for infrastructure updates.</li>
+            
+            <li> Managed critical campus infrastructure, including VMware Horizon (VDI), Genetec Security Center (Cameras/Door Access), eduroam-US networking, and telephony systems (Signalwire/Asterisk).</li>
+            
+            <li> Managed the full certificate lifecycle for internal and external services (SSL/Client/Code-Sign) using InCommon/Sectigo, including key management and team mentorship.</li>
+            
+          </ul>
         </div>
         
-        <div class="section">
-            <div class="section-title">Experience</div>
-            <div class="experience-item">
-                <div class="job-header">
-                    <div class="job-title">Senior Systems Engineer (Enterprise Systems Engineer)</div>
-                    <div class="job-dates">January 2019 – current</div>
-                </div>
-                <div class="company">Ringling College of Art and Design • <a href="https://www.ringling.edu/">https://www.ringling.edu/</a></div>
-                <ul class="highlights">
-                    <li>Architected, deployed, and managed a robust enterprise virtualization environment based on <strong>VMware vCenter/ESXi</strong> and Hyper-converged Infrastructure (<strong>Cisco HyperFlex</strong>).</li>
-                    <li>Led the deployment of <strong>Pure Storage SAN</strong> arrays and administered hardware across <strong>Cisco UCS</strong> blade and <strong>Dell PowerEdge</strong> fleets.</li>
-                    <li>Designed and maintain <strong>CI/CD pipelines</strong> using <strong>Git</strong>, <strong>Ansible</strong>, and <strong>GitHub Actions</strong> for automated deployment of macOS configurations, VMware templates, and infrastructure provisioning across enterprise environments.</li>
-                    <li>Spearheaded <strong>Identity and Access Management (IAM)</strong> solutions using <strong>Okta Workforce Identity Cloud</strong>, developing <strong>Okta Workflows</strong> and contributing to complex SSO integrations.</li>
-                    <li>Implemented automated account provisioning integrating <strong>Okta</strong> with <strong>Workday HCM</strong>, enabling seamless onboarding workflows for both students and employees while maintaining security compliance and reducing manual provisioning overhead.</li>
-                    <li>Enhanced organizational security posture by managing and troubleshooting <strong>Palo Alto firewall</strong> rules, administering the <strong>Graylog</strong> log management solution, and providing system hardening expertise.</li>
-                    <li>Architected serverless <strong>AWS Lambda</strong> functions integrated with <strong>Signalwire telephony</strong> to handle <strong>Okta MFA</strong> voice authentication, with automated deployments managed through <strong>GitHub Actions</strong> workflows for continuous integration and delivery.</li>
-                    <li>Orchestrate automated deployment pipelines for <strong>3,000+ macOS devices</strong> using <strong>Jamf Pro</strong> and <strong>Munki</strong> with <strong>Git-based workflows</strong>, enabling continuous integration of software packages and configuration management through <strong>Bash/Python</strong> automation scripts.</li>
-                    <li>Maintain enterprise-grade <strong>CI/CD workflows</strong> with automated testing, staged deployments, and rollback capabilities, reducing deployment errors by 85% and enabling rapid iteration cycles for infrastructure updates.</li>
-                    <li>Managed critical campus infrastructure, including <strong>VMware Horizon (VDI)</strong>, <strong>Genetec Security Center</strong> (Cameras/Door Access), <strong>eduroam-US</strong> networking, and telephony systems (<strong>Signalwire/Asterisk</strong>).</li>
-                    <li>Managed the full certificate lifecycle for internal and external services (<strong>SSL/Client/Code-Sign</strong>) using InCommon/Sectigo, including key management and team mentorship.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <div class="job-header">
-                    <div class="job-title">Systems Engineer/Team Lead</div>
-                    <div class="job-dates">March 2018 – January 2019</div>
-                </div>
-                <div class="company">SouthTech Solutions • <a href="https://www.southtech.com">https://www.southtech.com</a></div>
-                <ul class="highlights">
-                    <li>Provided technical leadership and mentorship to <strong>7-member support team</strong>, establishing daily performance goals and escalation procedures</li>
-                    <li>Served as senior escalation resource for complex <strong>Mac</strong>, <strong>Windows</strong>, and <strong>network infrastructure</strong> issues across managed service provider client base</li>
-                    <li>Deployed and configured on-premise infrastructure including <strong>backup/disaster recovery systems</strong>, <strong>firewalls</strong>, <strong>routers</strong>, <strong>switches</strong>, and <strong>access points</strong></li>
-                    <li>Administered enterprise networking equipment including <strong>SonicWall firewalls</strong> and <strong>managed switches</strong>, configuring <strong>DHCP</strong>, <strong>DNS</strong>, and <strong>NAS</strong> services</li>
-                    <li>Coordinated vendor relationships for hardware <strong>RMAs</strong>, service escalations, and resource scheduling to ensure client <strong>SLA compliance</strong></li>
-                    <li>Designed implementation strategies for complex <strong>multi-site client deployments</strong> and provided technical project leadership</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <div class="job-header">
-                    <div class="job-title">Systems Support Specialist</div>
-                    <div class="job-dates">February 2017 – March 2018</div>
-                </div>
-                <div class="company">SouthTech Solutions • <a href="https://www.southtech.com">https://www.southtech.com</a></div>
-                <ul class="highlights">
-                    <li>Implemented company-wide productivity solutions including <strong>Microsoft Teams</strong> deployment and user adoption strategies</li>
-                    <li>Resolved complex telephony issues for <strong>Star2Star VoIP</strong> systems, providing both technical support and user training</li>
-                    <li>Designed and implemented <strong>call center platforms</strong> for clients, including configuration, deployment, and staff training programs</li>
-                    <li>Managed user <strong>onboarding and offboarding</strong> processes, ensuring security compliance and access provisioning</li>
-                    <li>Created comprehensive <strong>knowledge base documentation</strong>, becoming top contributor of technical articles for internal staff reference</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <div class="job-header">
-                    <div class="job-title">Field Support Specialist</div>
-                    <div class="job-dates">July 2015 – January 2017</div>
-                </div>
-                <div class="company">DePaul University • <a href="https://www.depaul.edu">https://www.depaul.edu</a></div>
-                <ul class="highlights">
-                    <li>Developed customized <strong>macOS</strong> and <strong>Windows deployment images</strong> ensuring compliance with university security standards and application requirements</li>
-                    <li>Resolved <strong>Tier II</strong> hardware, software, networking, and <strong>IP telephony</strong> issues using enterprise tools including <strong>LogMeIn Rescue</strong>, <strong>Apple Remote Desktop</strong>, <strong>Microsoft SCCM</strong>, and <strong>Active Directory</strong></li>
-                    <li>Created <strong>bash</strong> and <strong>Python</strong> automation scripts for system diagnostics, troubleshooting workflows, and deployment processes</li>
-                    <li>Diagnosed and documented complex technical issues across <strong>authentication systems</strong>, <strong>network infrastructure</strong>, and <strong>telephony platforms</strong></li>
-                    <li>Recruited, trained, and provided technical mentorship to new team members while maintaining operational excellence</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <div class="job-header">
-                    <div class="job-title">Help Desk Associate Analyst</div>
-                    <div class="job-dates">June 2012 – July 2015</div>
-                </div>
-                <div class="company">DePaul University • <a href="https://www.depaul.edu">https://www.depaul.edu</a></div>
-                <ul class="highlights">
-                    <li>Developed in-house <strong>network storage access application</strong> for <strong>Mac computers</strong>, improving user experience and reducing support tickets</li>
-                    <li>Collaborated on a team to develop <strong>Single Sign-On (RADIUS)</strong> solution for wireless authentication, contributing to architecture design and testing</li>
-                    <li>Provided mobile device support across <strong>iOS</strong>, <strong>Android</strong>, and <strong>BlackBerry</strong> platforms for <strong>Exchange Server</strong> connectivity and university applications</li>
-                    <li>Delivered escalation support for faculty, staff, and students while maintaining service level agreements through <strong>PeopleSoft CRM</strong> system</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <div class="job-header">
-                    <div class="job-title">Help Desk Student Analyst</div>
-                    <div class="job-dates">January 2012 – June 2012</div>
-                </div>
-                <div class="company">DePaul University • <a href="https://www.depaul.edu">https://www.depaul.edu</a></div>
-                <ul class="highlights">
-                    <li>Managed ticket creation, maintenance, and escalation via <strong>PeopleSoft CRM</strong> system to meet <strong>service level agreements</strong></li>
-                    <li>Provided first-level technical support for university community while developing foundational <strong>IT support skills</strong></li>
-                </ul>
-            </div>
+        <div class='separator'></div>
+        <div class="jobBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              SouthTech Solutions, Systems Engineer/Team Lead
+            </span>
+            <span class='date'>
+              March 2018  &mdash;  January 2019
+            </span>
+          </div>
+          <ul class='highlights'>
+            
+            <li> Provided technical leadership and mentorship to 7-member support team, establishing daily performance goals and escalation procedures</li>
+            
+            <li> Served as senior escalation resource for complex Mac, Windows, and network infrastructure issues across managed service provider client base</li>
+            
+            <li> Deployed and configured on-premise infrastructure including backup/disaster recovery systems, firewalls, routers, switches, and access points</li>
+            
+            <li> Administered enterprise networking equipment including SonicWall firewalls and managed switches, configuring DHCP, DNS, and NAS services</li>
+            
+            <li> Coordinated vendor relationships for hardware RMAs, service escalations, and resource scheduling to ensure client SLA compliance</li>
+            
+            <li> Designed implementation strategies for complex multi-site client deployments and provided technical project leadership</li>
+            
+          </ul>
         </div>
         
-        <div class="section">
-            <div class="section-title">Education</div>
-            <div class="education-item">
-                <div>
-                    <div class="degree-info">B.S. in Network Technologies</div>
-                    <div class="institution">DePaul University</div>
-                </div>
-                <div class="graduation-date">2014</div>
-            </div>
+        <div class='separator'></div>
+        <div class="jobBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              SouthTech Solutions, Systems Support Specialist
+            </span>
+            <span class='date'>
+              February 2017  &mdash;  March 2018
+            </span>
+          </div>
+          <ul class='highlights'>
+            
+            <li> Implemented company-wide productivity solutions including Microsoft Teams deployment and user adoption strategies</li>
+            
+            <li> Resolved complex telephony issues for Star2Star VoIP systems, providing both technical support and user training</li>
+            
+            <li> Designed and implemented call center platforms for clients, including configuration, deployment, and staff training programs</li>
+            
+            <li> Managed user onboarding and offboarding processes, ensuring security compliance and access provisioning</li>
+            
+            <li> Created comprehensive knowledge base documentation, becoming top contributor of technical articles for internal staff reference</li>
+            
+          </ul>
         </div>
         
-        <div class="section">
-            <div class="section-title">Certifications</div>
-            <div class="certification-item">
-                <div class="certification-info">
-                    <div class="certification-name">Okta Certified Professional
-                    </div>
-                    <div class="certification-issuer">Okta</div>
-                </div>
-                <div class="certification-date">January 2025</div>
-            </div>
-            <div class="certification-item">
-                <div class="certification-info">
-                    <div class="certification-name">CompTIA Network&#43;
-                    </div>
-                    <div class="certification-issuer">CompTIA</div>
-                </div>
-                <div class="certification-date">August 2018</div>
-            </div>
-            <div class="certification-item">
-                <div class="certification-info">
-                    <div class="certification-name">Cisco Certified Network Associate (CCNA)
-                    </div>
-                    <div class="certification-issuer">Cisco</div>
-                </div>
-                <div class="certification-date">May 2018</div>
-            </div>
-            <div class="certification-item">
-                <div class="certification-info">
-                    <div class="certification-name">Apple Certified Technical Coordinator 10.10
-                    </div>
-                    <div class="certification-issuer">Apple</div>
-                </div>
-                <div class="certification-date">February 2016</div>
-            </div>
-            <div class="certification-item">
-                <div class="certification-info">
-                    <div class="certification-name">Apple Certified Support Professional 10.11
-                    </div>
-                    <div class="certification-issuer">Apple</div>
-                </div>
-                <div class="certification-date">February 2016</div>
-            </div>
-            <div class="certification-item">
-                <div class="certification-info">
-                    <div class="certification-name">Apple Certified Support Professional 10.10
-                    </div>
-                    <div class="certification-issuer">Apple</div>
-                </div>
-                <div class="certification-date">February 2016</div>
-            </div>
-            <div class="certification-item">
-                <div class="certification-info">
-                    <div class="certification-name">Apple Certified Mac Technician
-                    </div>
-                    <div class="certification-issuer">Apple</div>
-                </div>
-                <div class="certification-date">August 2015</div>
-            </div>
-            <div class="certification-item">
-                <div class="certification-info">
-                    <div class="certification-name">HDI Support Center Analyst
-                    </div>
-                    <div class="certification-issuer">HDI (Help Desk Institute)</div>
-                </div>
-                <div class="certification-date">March 2013</div>
-            </div>
+        <div class='separator'></div>
+        <div class="jobBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              DePaul University, Field Support Specialist
+            </span>
+            <span class='date'>
+              July 2015  &mdash;  January 2017
+            </span>
+          </div>
+          <ul class='highlights'>
+            
+            <li> Developed customized macOS and Windows deployment images ensuring compliance with university security standards and application requirements</li>
+            
+            <li> Resolved Tier II hardware, software, networking, and IP telephony issues using enterprise tools including LogMeIn Rescue, Apple Remote Desktop, Microsoft SCCM, and Active Directory</li>
+            
+            <li> Created bash and Python automation scripts for system diagnostics, troubleshooting workflows, and deployment processes</li>
+            
+            <li> Diagnosed and documented complex technical issues across authentication systems, network infrastructure, and telephony platforms</li>
+            
+            <li> Recruited, trained, and provided technical mentorship to new team members while maintaining operational excellence</li>
+            
+          </ul>
         </div>
         
-        <div class="section">
-            <div class="section-title">Presentations</div>
-            <div class="speaking-item">
-                <div class="speaking-header">
-                    <div class="speaking-title"><a href="https://youtu.be/ocl9LJcdKbA">Deploying Jamf &#43; Munki in a Lab Environment</a>
-                    </div>
-                    <div class="speaking-date">2024</div>
-                </div>
-                <div class="speaking-event">Penn State MacAdmins Conference</div><div class="speaking-summary">Demonstrated practical deployment strategies for Mac management solutions to 200&#43; IT professionals, covering integration best practices and real-world implementation scenarios</div>
-            </div>
+        <div class='separator'></div>
+        <div class="jobBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              DePaul University, Help Desk Associate Analyst
+            </span>
+            <span class='date'>
+              June 2012  &mdash;  July 2015
+            </span>
+          </div>
+          <ul class='highlights'>
+            
+            <li> Developed in-house network storage access application for Mac computers, improving user experience and reducing support tickets</li>
+            
+            <li> Collaborated on Single Sign-On (RADIUS) solution for wireless authentication, contributing to architecture design and testing</li>
+            
+            <li> Provided mobile device support across iOS, Android, and BlackBerry platforms for Exchange Server connectivity</li>
+            
+          </ul>
         </div>
         
-        <div class="section">
-            <div class="section-title">Skills</div>
-            <div class="skill-category">
-                <span class="skill-name">Languages:</span>
-                <span class="skill-list">Bash/ZSH, Python, Cisco IOS, Powershell</span>
-            </div>
-            <div class="skill-category">
-                <span class="skill-name">Operating Systems:</span>
-                <span class="skill-list">macOS, Linux, Windows Server</span>
-            </div>
-            <div class="skill-category">
-                <span class="skill-name">Software:</span>
-                <span class="skill-list">Okta Workforce Identity Cloud, Meraki Systems Manager, ConnectWise, Jamf Pro, Munki, Ansible, VMware vCenter/ESXi, Cisco HyperFlex, Pure Storage, Palo Alto Firewalls, Graylog, AWS, Signalwire/Asterisk, Genetec Security Center, VMware Horizon (VDI)</span>
-            </div>
+        <div class='separator'></div>
+        <div class="jobBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              DePaul University, Help Desk Student Analyst
+            </span>
+            <span class='date'>
+              January 2012  &mdash;  June 2012
+            </span>
+          </div>
+          <ul class='highlights'>
+            
+            <li> Provided first-level technical support for university community while managing tickets via PeopleSoft CRM system to meet service level agreements</li>
+            
+          </ul>
         </div>
+        
+      </div>
+    </div>
+    <div class='sectionLine'></div>
+
+
+
+
+    <div id='education' class="sectionBlock">
+      <div class='sectionName'>
+        <span>EDUCATION</span>
+      </div>
+      <div class='sectionContent'>
+        
+        <div class='educationBlock'>
+          <span class='title'>
+            DePaul University
+          </span>
+          <span class='date'>
+             2014
+          </span>
+          <div class=''>
+            B.S. - Network Technologies
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class='sectionLine'></div>
+
+    <div id='skills' class="sectionBlock">
+      <div class='sectionName'>
+        <span>SKILLS</span>
+      </div>
+      <div class='sectionContent'>
+        
+        <div class='skillBlock'>
+          <span class='title'>Languages:</span>
+          <span>Bash/ZSH</span>, <span>Python</span>, <span>Cisco IOS</span>, <span>Powershell</span>
+        </div>
+        
+        <div class='skillBlock'>
+          <span class='title'>Operating Systems:</span>
+          <span>macOS</span>, <span>Linux</span>, <span>Windows Server</span>
+        </div>
+        
+        <div class='skillBlock'>
+          <span class='title'>Software:</span>
+          <span>Okta Workforce Identity Cloud</span>, <span>Meraki Systems Manager</span>, <span>ConnectWise</span>, <span>Jamf Pro</span>, <span>Munki</span>, <span>Ansible</span>, <span>VMware vCenter/ESXi</span>, <span>Cisco HyperFlex</span>, <span>Pure Storage</span>, <span>Palo Alto Firewalls</span>, <span>Graylog</span>, <span>AWS</span>, <span>Signalwire/Asterisk</span>, <span>Genetec Security Center</span>, <span>VMware Horizon (VDI)</span>
+        </div>
+        
+      </div>
+    </div>
+    <div class='sectionLine'></div>
+
+    <div id='certifications' class="sectionBlock">
+      <div class='sectionName'>
+        <span>CERTIFICATIONS</span>
+      </div>
+      <div class='sectionContent'>
+        
+        <div class='certificationBlock'>
+          <span class='title'>Okta Certified Professional</span>
+          <span class='date'>January 2025</span>
+          <div class='issuer'>Okta</div>
+          
+          <div class='summary'>Advanced identity and access management platform expertise</div>
+          
+        </div>
+        <div class='separator'></div>
+        
+        <div class='certificationBlock'>
+          <span class='title'>CompTIA Network&#43;</span>
+          <span class='date'>August 2018</span>
+          <div class='issuer'>CompTIA</div>
+          
+          <div class='summary'>Network infrastructure, security, and troubleshooting</div>
+          
+        </div>
+        <div class='separator'></div>
+        
+        <div class='certificationBlock'>
+          <span class='title'>Cisco Certified Network Associate (CCNA)</span>
+          <span class='date'>May 2018</span>
+          <div class='issuer'>Cisco</div>
+          
+          <div class='summary'>Routing, switching, and network foundation skills</div>
+          
+        </div>
+        <div class='separator'></div>
+        
+        <div class='certificationBlock'>
+          <span class='title'>Apple Certified Technical Coordinator 10.10</span>
+          <span class='date'>February 2016</span>
+          <div class='issuer'>Apple</div>
+          
+          <div class='summary'>macOS Yosemite enterprise deployment and management</div>
+          
+        </div>
+        <div class='separator'></div>
+        
+        <div class='certificationBlock'>
+          <span class='title'>Apple Certified Support Professional 10.11</span>
+          <span class='date'>February 2016</span>
+          <div class='issuer'>Apple</div>
+          
+          <div class='summary'>macOS El Capitan support and troubleshooting</div>
+          
+        </div>
+        <div class='separator'></div>
+        
+        <div class='certificationBlock'>
+          <span class='title'>Apple Certified Support Professional 10.10</span>
+          <span class='date'>February 2016</span>
+          <div class='issuer'>Apple</div>
+          
+          <div class='summary'>macOS Yosemite support and troubleshooting</div>
+          
+        </div>
+        <div class='separator'></div>
+        
+        <div class='certificationBlock'>
+          <span class='title'>Apple Certified Mac Technician</span>
+          <span class='date'>August 2015</span>
+          <div class='issuer'>Apple</div>
+          
+          <div class='summary'>Mac hardware repair and service certification</div>
+          
+        </div>
+        <div class='separator'></div>
+        
+        <div class='certificationBlock'>
+          <span class='title'>HDI Support Center Analyst</span>
+          <span class='date'>March 2013</span>
+          <div class='issuer'>HDI (Help Desk Institute)</div>
+          
+          <div class='summary'>IT service management and customer support best practices</div>
+          
+        </div>
+        <div class='separator'></div>
+        
+      </div>
     </div>
 </body>
+
 </html>
