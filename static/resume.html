@@ -210,16 +210,25 @@
 
       .jobBlock {
         page-break-inside: avoid;
-        margin-bottom: 0;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
       }
 
       .jobBlock-spaced {
-        margin-top: 12px;
+        margin-top: 10px !important;
+        padding-top: 0 !important;
       }
 
       .sectionLine {
-        margin-top: 8px;
-        margin-bottom: 8px;
+        margin-top: 8px !important;
+        margin-bottom: 8px !important;
+      }
+
+      .sectionContent .separator {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
     }
   </style>
