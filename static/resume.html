@@ -205,19 +205,21 @@
       }
 
       .sectionContent .separator {
-        height: 14px !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        display: none;
       }
 
       .jobBlock {
         page-break-inside: avoid;
-        margin-bottom: 0 !important;
+        margin-bottom: 8px;
+      }
+
+      .jobBlock + .separator + .jobBlock {
+        margin-top: 8px;
       }
 
       .sectionLine {
-        margin-top: 10px !important;
-        margin-bottom: 10px !important;
+        margin-top: 8px;
+        margin-bottom: 8px;
       }
     }
   </style>
